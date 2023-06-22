@@ -16,8 +16,8 @@ const App = () => (
     <Route exact path="/login" component={Login} />
     <ProtectedRoute exact path="/" component={Home} />
     <ProtectedRoute exact path="/jobs" component={Jobs} />
-    <ProtectedRoute path="/jobs/:id" component={JobItem} />
-    <ProtectedRoute path="/not-found" component={NotFound} />
+    <ProtectedRoute exact path="/jobs/:id" component={JobItem} />
+    <ProtectedRoute exact path="/not-found" component={NotFound} />
     <Route component={NotFound} />
   </Switch>
 )

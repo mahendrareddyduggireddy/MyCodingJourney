@@ -62,7 +62,8 @@ class Jobs extends Component {
 
   onEmploymentType = req => {
     const {employmentType} = this.state
-    this.setState({employmentType: employmentType.extend(req)}, this.getJobList)
+    const value = employmentType.extend(req)
+    this.setState({employmentType: value}, this.getJobList)
   }
 
   onButton = () => {
@@ -77,7 +78,8 @@ class Jobs extends Component {
   getJobList = async () => {
     this.setState({error: true})
     const {salaryRange, searchInput, employmentType} = this.state
-    const url = `https://apis.ccbp.in/jobs?employment_type=${employmentType.join()}&minimum_package=${salaryRange}&search=${searchInput}`
+    const val = employmentType.join()
+    const url = `https://apis.ccbp.in/jobs?employment_type=${val}&minimum_package=${salaryRange}&search=${searchInput}`
     const jwtToken = Cookies.get('jwt_token')
     const options = {
       headers: {
