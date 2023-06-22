@@ -1,0 +1,21 @@
+.header-container {
+  display: flex;
+  list-style-type: none;
+  width: 95%;
+  justify-content: space-between;
+}
+.links-container {
+  display: flex;
+  width: 20%;
+  justify-content: space-evenly;
+}
+.btn-container {
+  justify-self: flex-end;
+  background-color: blue;
+  height: 28px;
+  width: 95px;
+}
+.logo-one {
+  height: 50px;
+  width: 50px;
+}
